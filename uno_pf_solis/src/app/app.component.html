@@ -3,30 +3,12 @@
   <span class="example-spacer"></span>
   <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
 </mat-toolbar>
-<div class="container">
-  <div>
-    <mat-drawer-container autosize>
-      <div>
-        <button type="button" mat-button>
-          Alumnos
-        </button>
-      </div>
-      <div>
-        <button type="button" mat-button>
-          Clases
-        </button>
-      </div>
-      <div>
-        <button type="button" mat-button>
-          Cursos
-        </button>
-      </div>
-    </mat-drawer-container>
-  </div>
+<div class="container mat-app-background">
+  <app-navbar></app-navbar>
   <div>
     <app-lista-abm></app-lista-abm>
   </div>
 </div>
-<mat-grid-list cols="1" rowHeight="50px">
+<mat-grid-list cols="1" rowHeight="50px" class="mat-app-background">
   <mat-grid-tile class="fondo_azul">Footer</mat-grid-tile>
 </mat-grid-list>
