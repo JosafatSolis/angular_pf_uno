@@ -9,9 +9,11 @@ import { Alumno } from '../../models/alumno';
 })
 export class GridAlumnosComponent implements OnInit {
 
+  displayedColumns: string[] = ["matricula", "nombre", "apellidos", "fechaNacimiento", "genero"]
+
   @Input() alumnos: Alumno[] = [
-    new Alumno(123, "Juan", "Perez", new Date(), "Hombre"),
-    new Alumno(321, "Pedro", "Lopez", new Date(), "Hombre"),
+    {matricula: 123, nombre: "Juan", apellidos: "Perez", fechaNacimiento: new Date(), genero: "Hombre"},
+    {matricula: 321, nombre: "Pedro", apellidos: "Lopez", fechaNacimiento: new Date(), genero: "Hombre"},
   ];
 
   constructor() {
@@ -20,10 +22,6 @@ export class GridAlumnosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.alumnos = [
-      new Alumno(123, "Juan", "Perez", new Date(), "Hombre"),
-      new Alumno(321, "Pedro", "Lopez", new Date(), "Hombre"),
-    ];
   }
 
 }

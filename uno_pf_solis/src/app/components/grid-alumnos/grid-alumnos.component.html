@@ -1,31 +1,34 @@
 <table mat-table [dataSource]="alumnos">
     <!-- Matricula Column -->
-    <ng-container matColumnDef="Matricula">
-        <th mat-header-cell *matHeaderCellDef> Matricula</th>
+    <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef>Matricula</th>
         <td mat-cell *matCellDef="let element"> {{element.matricula}} </td>
     </ng-container>
 
     <!-- Nombre Column -->
-    <ng-container matColumnDef="Nombre">
-        <th mat-header-cell *matHeaderCellDef> Nombre</th>
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
         <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
     </ng-container>
 
     <!-- Apellidos Column -->
-    <ng-container matColumnDef="Apellidos">
+    <ng-container matColumnDef="apellidos">
         <th mat-header-cell *matHeaderCellDef>Apellidos</th>
         <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
     </ng-container>
 
     <!-- Fecha Nacimiento Column -->
-    <ng-container matColumnDef="FechaNac">
+    <ng-container matColumnDef="fechaNacimiento">
         <th mat-header-cell *matHeaderCellDef>Fecha Nac.</th>
         <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
     </ng-container>
 
     <!-- Genero Column -->
-    <ng-container matColumnDef="Genero">
+    <ng-container matColumnDef="genero">
         <th mat-header-cell *matHeaderCellDef>Genero</th>
         <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
     </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

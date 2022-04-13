@@ -32,3 +32,11 @@
 <mat-grid-list cols="1" rowHeight="50px">
   <mat-grid-tile class="fondo_azul">Footer</mat-grid-tile>
 </mat-grid-list>
+<mat-grid-list cols="4" rowHeight="1:4">
+  <mat-grid-tile>
+      <app-lista-alumnos></app-lista-alumnos>
+  </mat-grid-tile>
+  <mat-grid-tile class="fondo_rojo" [colspan]="3">
+      <app-abm-alumnos></app-abm-alumnos>
+  </mat-grid-tile>
+</mat-grid-list>  
