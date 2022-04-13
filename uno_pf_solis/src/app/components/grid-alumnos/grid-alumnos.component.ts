@@ -9,7 +9,8 @@ import { Alumno } from '../../models/alumno';
 })
 export class GridAlumnosComponent implements OnInit {
 
-  displayedColumns: string[] = ["matricula", "nombre", "apellidos", "fechaNacimiento", "genero"]
+  displayedColumns: string[] = ["matricula", "nombre", "apellidos"]
+  selectedRow: any;
 
   @Input() alumnos: Alumno[] = [
     {matricula: 123, nombre: "Juan", apellidos: "Perez", fechaNacimiento: new Date(), genero: "Hombre"},
@@ -24,4 +25,8 @@ export class GridAlumnosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeRowSelected(row: any) {
+    this.selectedRow = row;
+  }
+  
 }
